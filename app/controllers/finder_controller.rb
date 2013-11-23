@@ -1,0 +1,3 @@
+class FinderController < ApplicationController
+	
+end
