@@ -22,12 +22,24 @@ body {
 .lesson{
 	height: auto;
 	border: 1px solid #ccc;
-	margin: 5px;
-	box-shadow: 2px 2px 2px #ccc;
+	margin: 10px;
+	margin-bottom: 0px;
+	-moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+	padding: 15px;
+	opacity: .75;
 }
 
-.videoContainer{
+.video{
 	height: auto;
 	width: auto;
 	border: 1px solid #ccc;
+	border-top: 0px;
+	-moz-box-shadow: 0 0 3px #ccc;
+	-webkit-box-shadow: 0 0 3px #ccc;
+	box-shadow: 0 0 3px #ccc;
+	margin-bottom: 10px;
+	padding: 15px;
 }
+
