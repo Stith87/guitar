@@ -11,11 +11,15 @@
 <body>
 	<a href="#" id="login-link">Login</a>
 	<div id="buttons">
-      <label> <input id="query" value='cats' type="text"/><button id="search-button" disabled onclick="search()">Search</button></label>
+      <label> <input id="query" value='cats' type="text" onchange="search()"/><button id="search-button" disabled onclick="search()">Search</button></label>
     </div>
     <div id="search-container">
     </div>
-    <div id="ytplayer"></div>
+
+    <div class="container" id="searchContainer">
+	    
+		
+	</div>
 
     <script>
     	 // Load the IFrame Player API code asynchronously.
@@ -28,14 +32,10 @@
     // YouTube player after the API code downloads.
     var player;
 
-    function onYouTubePlayerAPIReady() {
-      player = new YT.Player('ytplayer', {
-        height: '390',
-        width: '640',
-        videoId: 'cc6U59efUdA'
-      });
-    }
+  
    	</script>
+
+  
     <script src="assets/auth.js"></script>
     <script src="assets/search.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

@@ -18,3 +18,9 @@ body {
 .alert {
 	margin-top: 10px;
 }
+
+.lesson{
+	height: auto;
+	border: 1px solid #ccc;
+	margin: 5px;
+}
