@@ -23,4 +23,11 @@ body {
 	height: auto;
 	border: 1px solid #ccc;
 	margin: 5px;
+	box-shadow: 2px 2px 2px #ccc;
+}
+
+.videoContainer{
+	height: auto;
+	width: auto;
+	border: 1px solid #ccc;
 }
