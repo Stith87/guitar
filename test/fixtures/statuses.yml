@@ -7,3 +7,7 @@ one:
 two:
   content: MyText
   user: Michael
+
+three:
+  content: MyText
+  user: Franky

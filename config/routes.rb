@@ -16,6 +16,8 @@ Guitar::Application.routes.draw do
 
   get "finder", :to => "finder#finder", as: :finder
 
+  get "/:id", to: 'profiles#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
