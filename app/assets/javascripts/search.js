@@ -5,13 +5,13 @@ function handleAPILoaded() {
 
 // Search for a given string.
 function search() {
-  var q = $('#query').val() + $('#skill').val() + $('#lessonType').val();
+  var q = "guitar" + $('#keyword').val() + " " +  $('#skill').val() + " " + $('#lessonType').val() + " " + $('#technique').val() + " " + "lesson" ;
   var request = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet',
     order: 'relevance',
     type: 'video',
-    maxResults: '15'
+    maxResults: '50'
   });
 
   $('#searchContainer').html('');

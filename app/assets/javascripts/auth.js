@@ -51,6 +51,12 @@ function handleAuthResult(authResult) {
 // http://code.google.com/p/google-api-javascript-client/wiki/GettingStarted#Loading_the_Client
 function loadAPIClientInterfaces() {
   gapi.client.load('youtube', 'v3', function() {
+    gapi.client.load('youtubeAnalytics', 'v1', function() {
+
+    });
+
     handleAPILoaded();
   });
+
+
 }
