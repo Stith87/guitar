@@ -13,11 +13,21 @@
  */
 body {
 	padding-top: 40px;
+	background-image: url('woodbg.jpg');
+	background-repeat: none;
+	background-position: fixed;
 }
 
+.content{
+	margin-top:25px;
+	background-color: #fff;
+	padding: 15px;
+	box-shadow: 1px 1px 5px #777;
+}
 .alert {
 	margin-top: 10px;
 }
+
 
 .lesson{
 	height: auto;
@@ -28,7 +38,7 @@ body {
 	-webkit-box-shadow: 0 0 5px #ccc;
 	box-shadow: 0 0 5px #ccc;
 	padding: 15px;
-	opacity: .75;
+	opacity: .50;
 }
 
 .video{
@@ -42,5 +52,26 @@ body {
 	margin-bottom: 10px;
 	background-color: #222;
 	padding: 15px;
+}
+
+.hover{
+	box-shadow: 0px 0px 6px #ccc;
+}
+
+.logo {
+	width:200px;
+	height: 25px;
+	background-image: url('logo.png');
+	background-size: cover;
+}
+
+
+.nav-pills li{
+	margin-top: 5px;
+}
+
+.nav-pills li:hover, li:focus{
+	box-shadow: 0px 0px 5px #222;
+	background-color: #c48727;
 }
 

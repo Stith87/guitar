@@ -10,10 +10,11 @@
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a href="#" class="brand"> Lesson Finder</a>
-				<ul class="nav">
+				<a href="#" class="brand logo"></a>
+				<ul class="nav nav-pills">
 					<li><%= link_to "Feed", feed_path %></li>
 					<li><%= link_to "Finder", finder_path %></li>
+					<li><a href="http://www.guitarshed.net/blog" target="_blank">Blog</a></li>
 				</ul>
 				<ul class="nav pull-right">
 					<% if user_signed_in? %>
@@ -27,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
+	<div class="container content">
 
 		<% flash.each do |type, message| %>
 			<div class="alert <%= flash_class type %>">

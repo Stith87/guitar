@@ -43,10 +43,11 @@ function search() {
 
     function showDetails(resultTitle, resultImg, divId, videoId){
 
-      $('#searchContainer').append('<a href="#"><div  id="' + divId + '" " class="lesson span10"></div></a>');
-      $("#" + divId).html("<h4 class='pull-left'>" + resultTitle + "</h4><img src='" + resultImg + "' class='pull-right'><br />");
+      $('#searchContainer').append('<div  id="' + divId + '" " class="lesson span10" style="cursor: pointer"></div>');
+      $("#" + divId).html("<h4 class='pull-left'>" + resultTitle + "</h4><img src='" + resultImg + "' class='pull-right'><br /></div>");
       $('#' + divId).after('<div class="videoContainer_' + videoId +' span10 video"></div>'); 
-       $('.videoContainer_' + videoId +'').hide();  
+      $('.videoContainer_' + videoId +'').hide();  
+      
     }
 
   });
@@ -63,25 +64,30 @@ function search() {
            $('.videoContainer_' + videoId +'').slideUp('slow',function(){
               $('.videoContainer_' + videoId +'').html('');
            });
-            
+
         });
 
         
     $('#' + divId).mouseenter(function(){
       $(this).fadeTo("fast", 1.00);
+      $(this).css({ boxShadow: '0px 5px 6px #444' })
     })    
     
     $('#' + divId).mouseleave(function(){
       $(this).fadeTo("fast", .75);
-    })   
+      $(this).css({ boxShadow: '0px 0px 0px #444' })
+    }) 
+
+    
   }
 }
-
+    
 
 
   function playResults(videoId, videoDiv){
 
     $('.videoContainer_' + videoId +'').append('<center><iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center>');
-    
+      
     }
+
 
