@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
 	<div class="navbar navbar-fixed-top">
@@ -28,7 +29,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container content">
+	<div class="container content row col-lg-12">
 
 		<% flash.each do |type, message| %>
 			<div class="alert <%= flash_class type %>">
