@@ -14,7 +14,7 @@ Guitar::Application.routes.draw do
   get 'feed', :to => 'statuses#index', as: :feed
   root to: 'statuses#index'
 
-  match "finder", :to => "finder#finder", as: :finder
+  match "finder" => "finder#finder"
   
 
   get "/:id", to: 'profiles#show'
