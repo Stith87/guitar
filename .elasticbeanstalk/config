@@ -1,0 +1,15 @@
+[global]
+ApplicationName=guitarshed
+AwsCredentialFile=C:\Users\Michael\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.us-west-2.amazonaws.com
+EnvironmentName=GuitarShed
+EnvironmentType=LoadBalanced
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=C:\apps\guitar\guitar\.elasticbeanstalk\optionsettings.GuitarShed
+RdsDeletionPolicy=Delete
+RdsEnabled=Yes
+RdsSourceSnapshotName=
+Region=us-west-2
+ServiceEndpoint=https://elasticbeanstalk.us-west-2.amazonaws.com
+SolutionStack=32bit Amazon Linux 2013.09 running Ruby 1.9.3
+
