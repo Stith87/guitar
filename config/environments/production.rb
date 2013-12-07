@@ -4,6 +4,8 @@ Guitar::Application.configure do
   # Code is not reloaded between requests
   config.cache_classes = true
 
+  # Precompile production assets
+  config.assets.precompile += %w( auth.js search.js) 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
