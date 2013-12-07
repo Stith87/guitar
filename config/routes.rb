@@ -14,8 +14,8 @@ Guitar::Application.routes.draw do
   get 'feed', :to => 'statuses#index', as: :feed
   root to: 'statuses#index'
 
-  get "finder", :to => "finder#finder", as: :finder
-  root to: 'finder#show'
+  
+  
 
   get "/:id", to: 'profiles#show'
 
@@ -76,3 +76,5 @@ Guitar::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 end
+
+get "finder", :to => "finder#finder", as: :finder
