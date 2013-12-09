@@ -57,6 +57,7 @@ function search() {
           
           $('.videoContainer_' + videoId +'').slideDown('fast', function(){
             playResults(videoId, divId);
+            
           });
                     
         }, function(){
@@ -88,6 +89,7 @@ function search() {
 
     $('.videoContainer_' + videoId +'').append('<center><iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center>');
       
+
     }
 
 
