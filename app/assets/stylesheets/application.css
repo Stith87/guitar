@@ -21,8 +21,8 @@ body {
 .content{
 	margin-top:25px;
 	background-color: #fff;
-	padding: 15px;
-	box-shadow: 1px 1px 5px #777;
+
+	
 }
 .alert {
 	margin-top: 10px;
@@ -39,7 +39,7 @@ body {
 	box-shadow: 0 0 5px #ccc;
 	padding: 15px;
 	opacity: .50;
-	background-color: #eee;
+	background-color: #fff;
 }
 
 .video{
@@ -76,3 +76,14 @@ body {
 	background-color: #c48727;
 }
 
+#buttons{
+
+	padding: 15px;
+}
+#searchContainer {
+	background-color: #ccc;
+}
+
+.bg {
+
+}

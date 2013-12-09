@@ -11,7 +11,6 @@ gem 'simple_form'
 
 
 gem 'google-api-client'
-gem 'mysql2'
 
 
 group :development, :test do
@@ -31,7 +30,7 @@ group :assets do
 end
 
 group :production do 
-	gem 'sqlite3'
+	gem 'sqlite3'	
 	gem 'mysql2'
 end
 
