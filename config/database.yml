@@ -19,7 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
-  timeout: 5000
+  adapter: mysql2
+  encoding: utf8
+  host: aak1awv9iq592j.citbgz1489ah.us-west-2.rds.amazonaws.com:3306
+  database: ebdb
+  username: root
+  password:
+  socket: /opt/bitnami/mysql/tmp/mysql.sock
