@@ -33,7 +33,7 @@ function search() {
       $('#' + divId).data("id:" , response.result.items[i].snippet.thumbnails.medium.url);
       $('#' + divId).data("divId:","ytplayer" + i);
 
-       console.log($('#' + divId).data())
+     
       showDetails(resultTitle, resultImg, divId, resultId);
       buildEvent(resultId, divId);
 
@@ -75,7 +75,7 @@ function search() {
     })    
     
     $('#' + divId).mouseleave(function(){
-      $(this).fadeTo("fast", .75);
+      $(this).fadeTo("fast", .5);
       $(this).css({ boxShadow: '0px 0px 0px #444' })
     }) 
 
