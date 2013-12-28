@@ -87,3 +87,15 @@ body {
 .bg {
 
 }
+
+
+.tabs{
+	width: 100%;
+
+}
+
+.tabs td{
+	width: 33.3%;
+	padding: 10px;
+
+}

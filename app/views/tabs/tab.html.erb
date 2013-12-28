@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Guitar</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "auth" %>
+  <%= javascript_include_tag "search" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	
+	<div id="buttons" class="row-fluid">
+      <label for="keyword">Keyword</label> <input id="keyword" value='' type="text"/><select name="skill" id="skill">
+          <option value=""></option>
+          <option value="beginner">Artist</option>
+          <option value="intermediate">Song</option>
+        </select>
+       
+        <button id="search-button" onclick="search()">Search</button></label>
+  
+
+    
+      	
+      	
+	
+      	
+    </div>
+    
+
+    <div class="container-fluid" id="searchContainer">
+
+		
+	  </div>
+
+   
+  
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+
+  <table class="tabs">	
+<% @tabs.each do |tab| %>
+
+
+  <tr class="well tabs">
+  <td><%= tab.artist %></td>
+  <td><%= tab.title %></td>
+  <td><a href="https://s3-us-west-2.amazonaws.com/guitarsheduploads/<%= tab.url %>">Download</a></td>
+  </tr>
+
+
+<% end %>
+
+ </table>
+

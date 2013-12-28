@@ -15,8 +15,9 @@ Guitar::Application.routes.draw do
   root to: 'statuses#index'
 
   match "finder" => "finder#finder"
-  match "tab" => "tab#tab"
-  get 'search' => "tab#show"
+  match "tab" => "tabs#tab"
+  get 'search' => "tabs#show"
+
 
 
   get "/:id", to: 'profiles#show'
