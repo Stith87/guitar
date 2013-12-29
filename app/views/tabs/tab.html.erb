@@ -21,19 +21,22 @@
     <div class="container-fluid" id="searchContainer">+
        <%= render 'form' %> 
         <table class="tabs"> 
+          
+          <% if (defined?(@tabs)).nil? %>
 
-          <% @tabs.each do |tab| %>
-
-
-            <tr class="well tabs">
-            <td><%= tab.artist %></td>
-            <td><%= tab.title %></td>
-            <td><a href="https://s3-us-west-2.amazonaws.com/guitarsheduploads/<%= tab.url %>">Download</a></td>
-            </tr>
+          <% else %>
+            <% @tabs.each do |tab| %>
 
 
+              <tr class="well tabs">
+              <td><%= tab.artist %></td>
+              <td><%= tab.title %></td>
+              <td><a href="https://s3-us-west-2.amazonaws.com/guitarsheduploads/<%= tab.url %>">Download</a></td>
+              </tr>
+
+
+            <% end %>
           <% end %>
-
         </table>
 		
 	  </div>
