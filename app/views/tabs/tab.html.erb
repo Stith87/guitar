@@ -10,15 +10,6 @@
 <body>
 	
 	<div id="buttons" class="row-fluid">
-      <label for="keyword">Keyword</label> <input id="keyword" value='' type="text"/><select name="skill" id="skill">
-          <option value=""></option>
-          <option value="beginner">Artist</option>
-          <option value="intermediate">Song</option>
-        </select>
-       
-        <button id="search-button" onclick="search()">Search</button></label>
-  
-
     
       	
       	
@@ -27,8 +18,23 @@
     </div>
     
 
-    <div class="container-fluid" id="searchContainer">
+    <div class="container-fluid" id="searchContainer">+
+       <%= render 'form' %> 
+        <table class="tabs"> 
 
+          <% @tabs.each do |tab| %>
+
+
+            <tr class="well tabs">
+            <td><%= tab.artist %></td>
+            <td><%= tab.title %></td>
+            <td><a href="https://s3-us-west-2.amazonaws.com/guitarsheduploads/<%= tab.url %>">Download</a></td>
+            </tr>
+
+
+          <% end %>
+
+        </table>
 		
 	  </div>
 

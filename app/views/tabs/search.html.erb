@@ -1,0 +1,8 @@
+<% if @tabs.empty? %>
+  No products found
+<% else %>
+  <% @tabs.each do |product| %>
+    <%= Tabs.artist %> 
+    <br />
+  <% end %>
+<% end %>

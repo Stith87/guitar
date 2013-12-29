@@ -5,5 +5,5 @@ class Tab < ActiveRecord::Base
   establish_connection ('tab')
   self.table_name = 'gp'
 
-
+  has_many :queries
 end

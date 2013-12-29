@@ -26,25 +26,27 @@ function search() {
       this.resultTitle = response.result.items[i].snippet.title;
       this.resultImg = response.result.items[i].snippet.thumbnails.medium.url;
       this.divId = "ytplayer" + i;
+      this.desc = response.result.items[i].snippet.description;
      
       $('#' + divId).data("id:", response.result.items[i].id.videoId);
       $('#' + divId).data("title:", response.result.items[i].snippet.title);
       $('#' + divId).data("img:", response.result.items[i].id.videoId);
       $('#' + divId).data("id:" , response.result.items[i].snippet.thumbnails.medium.url);
+      $('#' + divId).data("desc:" , response.result.items[i].snippet.description);
       $('#' + divId).data("divId:","ytplayer" + i);
 
      
-      showDetails(resultTitle, resultImg, divId, resultId);
+      showDetails(resultTitle, resultImg, divId, resultId, desc);
       buildEvent(resultId, divId);
 
     }
 
 
 
-    function showDetails(resultTitle, resultImg, divId, videoId){
+    function showDetails(resultTitle, resultImg, divId, videoId, desc){
 
       $('#searchContainer').append('<div  id="' + divId + '" " class="lesson span10" style="cursor: pointer"></div>');
-      $("#" + divId).html("<h4 class='pull-left'>" + resultTitle + "</h4><img src='" + resultImg + "' class='pull-right'><br /></div>");
+      $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-polaroid'></div><div class='details' ><h4>" + resultTitle + "</h4><p>" + desc + "</p></div></div>");
       $('#' + divId).after('<div class="videoContainer_' + videoId +' span10 video"></div>'); 
       $('.videoContainer_' + videoId +'').hide();  
       

@@ -17,7 +17,7 @@ Guitar::Application.routes.draw do
   match "finder" => "finder#finder"
   match "tab" => "tabs#tab"
   get 'search' => "tabs#show"
-
+  post '/query' => "tabs#query"
 
 
   get "/:id", to: 'profiles#show'
