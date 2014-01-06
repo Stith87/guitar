@@ -9,8 +9,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-	<div id="buttons" class="row-fluid">
+<div class="container lesson_container">
+	<div id="buttons" class="row">
       <label for="keyword">Keyword</label> <input id="keyword" value='' type="text"/>
   
 
@@ -44,12 +44,13 @@
       	<button id="search-button" disabled onclick="search()">Search</button></label>
     </div>
     
-
-    <div class="container-fluid" id="searchContainer">
-	    
-		
-	  </div>
-
+   
+      <div class="row" id="searchContainer">
+  	    
+  		
+  	  </div>
+  
+  
     <script>
     	 // Load the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -69,5 +70,6 @@
     <script src="assets/search.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+
 </body>
 </html>

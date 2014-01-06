@@ -45,9 +45,9 @@ function search() {
 
     function showDetails(resultTitle, resultImg, divId, videoId, desc){
 
-      $('#searchContainer').append('<div  id="' + divId + '" " class="lesson span10" style="cursor: pointer"></div>');
-      $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-polaroid'></div><div class='details' ><h4>" + resultTitle + "</h4><p>" + desc + "</p></div></div>");
-      $('#' + divId).after('<div class="videoContainer_' + videoId +' span10 video"></div>'); 
+      $('#searchContainer').append('<div id="' + divId + '" " class="lesson row" style="cursor: pointer"></div>');
+      $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-polaroid img-responsive'></div><div class='details' ><h4>" + resultTitle + "</h4><p>" + desc + "</p></div></div>");
+      $('#' + divId).after('<div class="videoContainer_' + videoId +'  video row"></div>'); 
       $('.videoContainer_' + videoId +'').hide();  
       
     }
@@ -77,7 +77,7 @@ function search() {
     })    
     
     $('#' + divId).mouseleave(function(){
-      $(this).fadeTo("fast", .5);
+      $(this).fadeTo("fast", .8);
       $(this).css({ boxShadow: '0px 0px 0px #444' })
     }) 
 
@@ -89,7 +89,7 @@ function search() {
 
   function playResults(videoId, videoDiv){
 
-    $('.videoContainer_' + videoId +'').append('<center><iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center>');
+    $('.videoContainer_' + videoId +'').append('<center><iframe id="ytplayer" type="text/html" width="640" height="360" style="max-width: 100%;" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></center>');
       
 
     }
