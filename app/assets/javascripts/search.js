@@ -45,9 +45,9 @@ function search() {
 
     function showDetails(resultTitle, resultImg, divId, videoId, desc){
 
-      $('#searchContainer').append('<div id="' + divId + '" " class="lesson row" style="cursor: pointer"></div>');
+      $('#searchContainer').append('<div id="' + divId + '" " class="lesson col-xs-12 col-sm-12 col-md-12" style="cursor: pointer"></div>');
       $("#" + divId).html("<div class='videoImg'><img src='" + resultImg + "' class='img-polaroid img-responsive'></div><div class='details' ><h4>" + resultTitle + "</h4><p>" + desc + "</p></div></div>");
-      $('#' + divId).after('<div class="videoContainer_' + videoId +'  video row"></div>'); 
+      $('#' + divId).after('<div class="videoContainer_' + videoId +'  video col-xs-12 col-sm-12 col-md-12"></div>'); 
       $('.videoContainer_' + videoId +'').hide();  
       
     }
@@ -55,7 +55,23 @@ function search() {
   });
 
   function buildEvent(videoId, divId){
-    $('#' + divId).toggle(function(){
+
+    $.fn.clicktoggle = function(a, b) {
+        return this.each(function() {
+            var clicked = false;
+            $(this).click(function() {
+                if (clicked) {
+                    clicked = false;
+                    return b.apply();
+                }
+                clicked = true;
+                return a.apply();
+            });
+        });
+    };
+
+
+    $('#' + divId).clicktoggle(function(){
           
           $('.videoContainer_' + videoId +'').slideDown('fast', function(){
             playResults(videoId, divId);

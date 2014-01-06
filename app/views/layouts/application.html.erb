@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   
 </head>
 <body>
@@ -12,18 +13,18 @@
 		<div class="container">
 			  <!-- Brand and toggle get grouped for better mobile display -->
 			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 			      <span class="sr-only">Toggle navigation</span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			      <span class="icon-bar"></span>
 			    </button>
-			    <a class="navbar-brand logo" href="#"></a>
+			    <a class="navbar-brand logo" href="/"></a>
 			  </div>
 
 			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav nav-pills">
+			  <div id="nav" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav nav-pills nav-stacked">
 			          <li> <%= link_to "Tabs", tab_path %></li>
 			          <li><%= link_to "Lessons", finder_path %></li>
 			          <li><%= link_to "Social", feed_path %></li>

@@ -49,6 +49,18 @@ body {
 .lesson_container{
 	background-color: #ccc;
 }
+
+.lesson_container table {
+
+	margin: 0 auto;
+}
+
+.lesson_container td {
+
+	text-align: center;
+}
+
+
 .lesson{
 	height: auto;
 	border: 1px solid #ccc;
